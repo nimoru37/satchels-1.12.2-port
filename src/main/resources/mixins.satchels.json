@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "makamys.satchels.mixin",
+  "refmap": "mixins.satchels.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinInventoryPlayer"
+  ],
+  "client": [
+    "MixinGuiRecipeBook",
+    "MixinGuiScreenAccessor",
+    "MixinGuiContainer"
+  ]
+}

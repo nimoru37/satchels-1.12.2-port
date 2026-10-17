@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "satchels",
+    "name": "Satchels",
+    "description": "Upgrade your inventory! Modular, wearable inventory upgrades.",
+    "version": "1.0.0",
+    "mcversion": "1.12.2",
+    "authorList": ["makamys, nimoru"],
+    "credits": "Port of https://github.com/makamys/Satchels",
+    "dependencies": ["mixinbooter"]
+  }
+]

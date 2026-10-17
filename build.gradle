@@ -1,0 +1,53 @@
+plugins {
+    id 'java-library'
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.4.9'
+}
+
+version = project.mod_version
+group = 'makamys.satchels'
+base {
+    archivesName = 'Satchels-1.12.2'
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
+}
+
+minecraft {
+    mcVersion = '1.12.2'
+    username = 'Developer'
+    useDependencyAccessTransformers = true
+    // load the coremod (mixin loader) in the dev environment
+    extraRunJvmArguments.add('-Dfml.coreMods.load=makamys.satchels.core.SatchelsMixinLoader')
+}
+
+repositories {
+    maven { url 'https://maven.cleanroommc.com' }
+    maven { url 'https://nexus.gtnewhorizons.com/repository/public/' }
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor 'org.ow2.asm:asm-debug-all:5.2'
+    annotationProcessor 'com.google.guava:guava:32.1.2-jre'
+    annotationProcessor 'com.google.code.gson:gson:2.8.9'
+
+    String mixinBooter = modUtils.enableMixins('zone.rong:mixinbooter:10.7', 'mixins.satchels.refmap.json')
+    api(mixinBooter) {
+        transitive = false
+    }
+    annotationProcessor(mixinBooter) {
+        transitive = false
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+            'FMLCorePlugin': 'makamys.satchels.core.SatchelsMixinLoader',
+            'FMLCorePluginContainsFMLMod': 'true'
+        )
+    }
+}

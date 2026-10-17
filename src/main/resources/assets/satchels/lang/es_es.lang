@@ -1,0 +1,16 @@
+container.equipment.satchel=Bolsa
+container.equipment.pouches=Bolsillos
+item.satchels.satchel.name=Bolsa
+item.satchels.pouch.name=Bolsillo
+item.satchels.pouch_upgrade.name=Ampliación de bolsillo
+tooltip.satchels.holdCtrl=§8§o<Mantén Ctrl>
+tooltip.satchels.pouch.slotCount=%d espacios
+tooltip.satchels.pouch.sneakUseHint=Úsalo mientras te agachas para abrir el inventario de mejoras
+tooltip.satchels.pouchUpgrade=Añade 1 espacio a un bolsillo
+tooltip.satchels.pouchUpgrade.requiresSatchel=Esta ranura requiere una bolsa equipada
+tooltip.satchels.equipHint=Equípalo en la pantalla de equipamiento (pulsa §b%s§7)
+key.satchels.openEquipment=Abrir equipamiento
+key.categories.satchels=Satchels
+subtitles.satchels.equip=Equipo equipado
+tab.satchels.inventory=Inventario
+tab.satchels.equipment=Equipamiento

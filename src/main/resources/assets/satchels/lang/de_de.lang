@@ -1,0 +1,16 @@
+container.equipment.satchel=Tasche
+container.equipment.pouches=Beutel
+item.satchels.satchel.name=Tragetasche
+item.satchels.pouch.name=Beutel
+item.satchels.pouch_upgrade.name=Beutel-Erweiterung
+tooltip.satchels.holdCtrl=§8§o<Strg gedrückt halten>
+tooltip.satchels.pouch.slotCount=%d Slots
+tooltip.satchels.pouch.sneakUseHint=Beim Schleichen verwenden, um das Erweiterungsinventar zu öffnen
+tooltip.satchels.pouchUpgrade=Fügt einem Beutel 1 Slot hinzu
+tooltip.satchels.pouchUpgrade.requiresSatchel=Dieser Slot benötigt eine ausgerüstete Tragetasche
+tooltip.satchels.equipHint=Im Ausrüstungsbildschirm anlegen (§b%s§7 drücken)
+key.satchels.openEquipment=Ausrüstung öffnen
+key.categories.satchels=Satchels
+subtitles.satchels.equip=Ausrüstung angelegt
+tab.satchels.inventory=Inventar
+tab.satchels.equipment=Ausrüstung

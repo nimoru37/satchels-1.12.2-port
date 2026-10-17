@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        maven {
+            // RetroFuturaGradle is hosted here
+            name = 'GTNH Maven'
+            url = 'https://nexus.gtnewhorizons.com/repository/public/'
+        }
+        gradlePluginPortal()
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+rootProject.name = 'Satchels-1.12.2'

@@ -1,0 +1,16 @@
+container.equipment.satchel=Сумка
+container.equipment.pouches=Карманы
+item.satchels.satchel.name=Сумка
+item.satchels.pouch.name=Карман
+item.satchels.pouch_upgrade.name=Расширение для кармана
+tooltip.satchels.holdCtrl=§8§o<Зажмите Ctrl>
+tooltip.satchels.pouch.slotCount=%d слотов
+tooltip.satchels.pouch.sneakUseHint=Используйте с Shift чтобы открыть инвентарь расширения
+tooltip.satchels.pouchUpgrade=Добавляет 1 слот к карману
+tooltip.satchels.pouchUpgrade.requiresSatchel=Этот слот доступен только при надетой сумке
+tooltip.satchels.equipHint=Экипируйте на вкладке экипировки (нажмите §b%s§7)
+key.satchels.openEquipment=Открыть вкладку экипировки
+key.categories.satchels=Satchels
+subtitles.satchels.equip=Сумка надета
+tab.satchels.inventory=Инвентарь
+tab.satchels.equipment=Экипировка

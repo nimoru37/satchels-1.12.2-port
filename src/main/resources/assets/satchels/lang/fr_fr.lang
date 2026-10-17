@@ -1,0 +1,16 @@
+container.equipment.satchel=Sacoche
+container.equipment.pouches=Pochettes
+item.satchels.satchel.name=Sacoche
+item.satchels.pouch.name=Pochette
+item.satchels.pouch_upgrade.name=Agrandissement de pochette
+tooltip.satchels.holdCtrl=§8§o<Maintenir Ctrl>
+tooltip.satchels.pouch.slotCount=%d emplacements
+tooltip.satchels.pouch.sneakUseHint=Utilisez en vous accroupissant pour ouvrir l'inventaire d'amélioration
+tooltip.satchels.pouchUpgrade=Ajoute 1 emplacement à une pochette
+tooltip.satchels.pouchUpgrade.requiresSatchel=Cet emplacement nécessite une sacoche équipée
+tooltip.satchels.equipHint=Équipez-vous dans l'écran d'équipement (appuyez sur §b%s§7)
+key.satchels.openEquipment=Ouvrir l'équipement
+key.categories.satchels=Satchels
+subtitles.satchels.equip=Équipement équipé
+tab.satchels.inventory=Inventaire
+tab.satchels.equipment=Équipement
