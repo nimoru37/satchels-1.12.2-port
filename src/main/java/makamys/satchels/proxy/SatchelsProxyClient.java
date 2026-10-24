@@ -47,6 +47,7 @@ public class SatchelsProxyClient extends SatchelsProxyCommon {
     private static final int TAB_ID_INVENTORY = 7770;
     private static final int TAB_ID_EQUIPMENT = 7771;
     private static final int INVTWEAKS_ID_BASE = 54696386;
+    private static final String BAUBLES_BUTTON = "baubles.client.gui.GuiBaublesButton";
     private static final String GALACTICRAFT_INVENTORY_GUI =
         "micdoodle8.mods.galacticraft.core.client.gui.container.GuiExtendedInventory";
     private static final String TECHGUNS_INVENTORY_GUI = "techguns.gui.player.TGPlayerInventoryGui";
@@ -116,6 +117,13 @@ public class SatchelsProxyClient extends SatchelsProxyCommon {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onInitGuiPost(GuiScreenEvent.InitGuiEvent.Post event) {
         GuiScreen gui = event.getGui();
+        if (gui instanceof GuiSatchelsInventory) {
+            for (GuiButton button : event.getButtonList()) {
+                if (button.getClass().getName().equals(BAUBLES_BUTTON)) {
+                    button.x += 16;
+                }
+            }
+        }
         if (gui instanceof GuiContainer && ((GuiContainer) gui).inventorySlots instanceof ContainerPlayerExtended) {
             event.getButtonList().removeIf(b -> b.id > INVTWEAKS_ID_BASE && b.id < INVTWEAKS_ID_BASE + 4);
         }
@@ -205,7 +213,7 @@ public class SatchelsProxyClient extends SatchelsProxyCommon {
         }
     }
 
-    private static void updateGalacticraftTabPositions(int left, int top) {
+    public static void updateGalacticraftTabPositions(int left, int top) {
         try {
             Class<?> tabRegistry = Class.forName(GALACTICRAFT_TAB_REGISTRY);
             Class<?> vanillaTab = Class.forName(GALACTICRAFT_VANILLA_TAB);
