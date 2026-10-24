@@ -12,6 +12,7 @@ import org.lwjgl.opengl.GL11;
 
 import makamys.satchels.ConfigSatchels;
 import makamys.satchels.Satchels;
+import makamys.satchels.proxy.SatchelsProxyClient;
 import makamys.satchels.inventory.ContainerSatchels;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiButtonImage;
@@ -49,15 +50,7 @@ public class GuiSatchelsInventory extends GuiInventory {
         super.initGui();
         replaceRecipeButtonTexture();
         updateLayoutPosition();
-
-        int tabLeft = this.guiLeft + 16;
-        int tabTop = this.guiTop - 28;
-        int tabStartOffset = GuiTabButton.getTabStartOffset(this.buttonList, tabLeft, tabTop);
-        for (GuiButton button : this.buttonList) {
-            if (button instanceof GuiTabButton) {
-                ((GuiTabButton) button).setTabStartOffset(tabStartOffset);
-            }
-        }
+        updateTabPositions();
     }
 
     private void replaceRecipeButtonTexture() {
@@ -90,7 +83,21 @@ public class GuiSatchelsInventory extends GuiInventory {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         updateLayoutPosition();
+        updateTabPositions();
         super.drawScreen(mouseX, mouseY, partialTicks);
+    }
+
+    private void updateTabPositions() {
+        int tabLeft = this.guiLeft + 16;
+        int tabTop = this.guiTop - 28;
+        SatchelsProxyClient.updateGalacticraftTabPositions(tabLeft, tabTop + 28);
+
+        int tabStartOffset = GuiTabButton.getTabStartOffset(this.buttonList, tabLeft, tabTop);
+        for (GuiButton button : this.buttonList) {
+            if (button instanceof GuiTabButton) {
+                ((GuiTabButton) button).setTabStartOffset(tabStartOffset);
+            }
+        }
     }
 
     private void updateLayoutPosition() {
